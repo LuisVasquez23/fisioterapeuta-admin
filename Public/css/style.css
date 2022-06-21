@@ -1,0 +1,240 @@
+:root {
+  --title-fs: 6rem;
+  --brand-fs: 2rem;
+}
+
+.navbar-blue {
+  background: #193c94;
+}
+
+.navbar-blue > a.navbar-brand {
+  color: white;
+}
+
+a.navbar-brand {
+  font-size: var(--brand-fs);
+}
+
+a.navbar-brand span {
+  color: #28bedf;
+}
+
+.nav-item .nav-link.active {
+  color: #1be123;
+}
+
+.nav-item .nav-link {
+  color: white;
+}
+
+.section {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  padding: 90px 0;
+}
+
+/*
+  ===========================================================================
+    CARD
+  ===========================================================================
+*/
+
+.card-container {
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card__categoria {
+  width: 100%;
+  max-width: 350px;
+  box-shadow: 5px 0px 10px 5px rgba(177, 177, 177, 0.377);
+  border-radius: 10px;
+}
+
+.card__title {
+  padding: 10px 10px;
+  background-color: #f56060;
+  border-radius: 10px 10px 0px 0;
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+}
+
+.card__footer {
+  padding: 8px 5px;
+}
+
+.card__footer .btn-link {
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.home__section {
+  background: linear-gradient(rgba(0, 0, 0, 0.432), rgba(0, 0, 0, 0.432)),
+    url("../img/fondoHome.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home__title {
+  color: white;
+  font-size: var(--title-fs);
+  font-weight: 700;
+}
+
+.home__title span {
+  display: block;
+  font-weight: 300;
+}
+
+.btn-section {
+  height: 50vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: flex-end;
+}
+
+.btn-success {
+  background-color: #38c33e;
+  color: white;
+  width: 120px;
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: #38c33e;
+  border: none;
+}
+
+.section__title {
+  font-size: 3rem;
+  color: #193c94;
+}
+
+.categoria__p {
+  width: 80%;
+  font-size: 1.5rem;
+  color: #6b6b6b;
+}
+
+.about__section {
+  background: linear-gradient(to top ,#193c9493 , #193c9493)  , url("../img/blue-polygon.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.about__section .section__title {
+  color: white;
+  text-align: end;
+}
+
+.about__section p {
+  color: white;
+  font-size: 1.3rem;
+}
+
+.about_content {
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+.img {
+  width: 100%;
+}
+
+/*
+  ===============================================================
+  CONTACT SECTION
+  ===============================================================
+*/
+
+.contact-container{
+  box-shadow: 2px 2px 5px rgb(192, 192, 192);
+  border-radius: 5px;
+  padding: 20px 10px;
+}
+
+.contact_section{
+  border-bottom: 2px solid rgb(201, 201, 201);
+}
+
+.form-group{
+  margin: 10px 0;
+}
+
+#mensajeInput{
+  resize: none;
+  min-height: 250px;
+}
+
+.form-control{
+  background-color: #e0e0e062;
+  
+}
+
+.form-control:focus{
+  border: 1px solid rgba(47, 0, 255, 0.336);
+  outline: none;
+}
+
+@media screen and (max-width: 568px) {
+  :root {
+    --title-fs: 3.5rem;
+    --brand-fs: 1.5rem;
+  }
+
+  .btn-section {
+    height: auto;
+    display: block;
+  }
+
+  .home__title {
+    text-align: center;
+  }
+
+  .section__title {
+    font-size: 2.6rem;
+  }
+
+  .about__section p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .btn-section {
+    height: auto;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  :root {
+    --title-fs: 4rem;
+  }
+
+  .home__title,
+  .btn-section {
+    text-align: center;
+  }
+
+  .categoria__p {
+    width: 100%;
+    font-size: 1.4rem;
+  }
+}
