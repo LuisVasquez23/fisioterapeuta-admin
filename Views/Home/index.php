@@ -5,13 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyCode - Desarrolla tus ideas al maximo </title>
+    <title>Physio Specialized - Pensando siempre en lo mejor para ti</title>
 
     <!-- Bootstrap CSS -->
     <?= BOOTSTRAPCSS ?>
 
     <!-- My CSS -->
     <link rel="stylesheet" href="<?= URL ?>Public/css/style.css">
+
+    <!-- FontAwesome -->
+    <?= FontAwesome ?>
 </head>
 
 <body>
@@ -150,23 +153,54 @@
         </section>
         <section class="section" id="contact">
             <div class="container contact-container">
-                <div class="contact_section">
-                    <h2 class="section__title">CONTACTO</h2>
-                </div>
+
                 <div class="row">
                     <div class="col-md-6">
+                        <div class="contact_section">
+                            <h2 class="section__title">CONTACTO</h2>
+                        </div>
                         <div class="contact-form pt-5">
                             <form action="" method="post" class="form">
                                 <div class="form-group">
                                     <input type="text" name="asunto" id="asuntoInput" class="form-control" placeholder="Asunto">
                                 </div>
                                 <div class="form-group">
-                                    <textarea name="mensaje" id="mensajeInput" class="form-control" placeholder="Mensaje" ></textarea>
+                                    <textarea name="mensaje" id="mensajeInput" class="form-control" placeholder="Mensaje"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" value="Enviar" class="btn btn-success">
                                 </div>
                             </form>
                         </div>
                     </div>
-                    <div class="col-md-6"></div>
+                    <div class="col-md-6">
+                        <div class="contact-container-info">
+                            <div class="contact-info ">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-location-pin"></i> Santa Ana, El Salvador
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-phone"></i> +503 6057-1557
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <i class="fa-brands fa-whatsapp"></i> +503 6057-1557
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <i class="fa-brands fa-facebook"></i> Physio <span>Specialized</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -175,6 +209,14 @@
 
     <!-- Bootstrap JS -->
     <?= BOOTSTRAPJS ?>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <h3 class="footer-title">
+                &copy; Physio <span>Specialized</span>
+            </h3>
+        </div>
+    </footer>
 </body>
 
 </html>
