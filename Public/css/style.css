@@ -319,4 +319,48 @@ a.navbar-brand span {
     width: 100%;
     font-size: 1.4rem;
   }
+
+}
+/*
+  ===============================================================
+  CATEGORY SECTION
+  ===============================================================
+*/
+.category__section {
+  background: linear-gradient(rgba(0, 0, 0, 0.432), rgba(0, 0, 0, 0.432)),
+    url("../img/musculoesquelita.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__titleE {
+  padding: 10px 10px;
+  background-color: #193c94;
+  border-radius: 10px 10px 0px 0;
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+.card__Textbody{
+  padding: 6px 15px 0px;
+}
+
+.card__categoriaE {
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 5px 0px 10px 5px rgba(177, 177, 177, 0.377);
+  border-radius: 10px;
+}
+.card__container_Ejerc {
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
 }
