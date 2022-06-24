@@ -8,27 +8,35 @@
     <title>Store503 - Error 404</title>
 
     <?= BOOTSTRAPCSS ?>
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="<?= URL ?>Public/css/style.css">
+
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="<?= URL ?>">Store503</a>
+     <!-- Navbar Start -->
+     <nav class="navbar navbar-expand-lg navbar-dark navbar-blue fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="<?= URL ?>">
+                Physio <span>Specialized</span>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav ">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="<?= URL ?>">Regresar</a>
+                        <a class="nav-link active" aria-current="page" href="<?= URL ?>">Regresar</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    <!-- Navbar end -->
 
-    <div class="container">
+    <div class="container mt-5">
         <div class="row text-center">
             <div class="col-md-12">
                 <h3 class="display-1 mt-5">
