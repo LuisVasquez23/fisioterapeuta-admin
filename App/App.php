@@ -31,18 +31,6 @@ class App
 
         $ControllerObj = new $ControllerClass();
         $ControllerObj->loadModel($url[0]);
-
-
-        if (isset($url[1])) {
-            if (method_exists($ControllerObj, $url[1])) {
-                if ($url[2]) {
-                    $ControllerObj->{$url[1]}($url[2]);
-                } else {
-                    $ControllerObj->{$url[1]}();
-                }
-            }
-        }
-
         $ControllerObj->render();
     }
 }
