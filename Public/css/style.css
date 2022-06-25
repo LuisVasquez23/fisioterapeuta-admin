@@ -265,6 +265,12 @@ a.navbar-brand span {
 }
 
 
+/*
+  ================================================================
+    Media Queries
+  ================================================================
+*/
+
 @media screen and (max-width: 568px) {
   :root {
     --title-fs: 3.5rem;
@@ -278,6 +284,7 @@ a.navbar-brand span {
 
   .home__title {
     text-align: center;
+    font-size: 1.8rem;
   }
 
   .section__title {
@@ -298,6 +305,10 @@ a.navbar-brand span {
   .btn-section {
     height: auto;
     display: block;
+  }
+
+  .home__title{
+    font-size: 2.8rem;
   }
 
   .contact-container-info{
@@ -321,6 +332,13 @@ a.navbar-brand span {
   }
 
 }
+
+@media screen and (max-width:512px) {
+  .home__title{
+    font-size: 1.8rem;
+  }
+}
+
 /*
   ===============================================================
   CATEGORY SECTION

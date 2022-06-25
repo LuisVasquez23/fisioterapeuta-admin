@@ -51,9 +51,9 @@
         <section class="section category__section">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8">
+                    <div class="col-md-12 text-center">
                         <h3 class="home__title">
-                        CARDIOPULMONAR
+                            CARDIOPULMONAR
                         </h3>
                     </div>
                    
