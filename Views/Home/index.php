@@ -50,16 +50,14 @@
     <main>
         <section class="section home__section" id="home">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-8">
+                <div class="row justify-content-md-center text-center">
+                    <div class="col-lg-6 ">
                         <h3 class="home__title">
                             MENS SANA
                             <span>IN CORPORE</span>
                             SANO
                         </h3>
-                    </div>
-                    <div class="col-lg-4 btn-section">
-                        <a href="#categories" class="btn btn-success">Ejercicios</a>
+                        <a href="#categories" class="btn btn-success mt-4">Ejercicios</a>
                     </div>
                 </div>
             </div>
@@ -82,7 +80,7 @@
 
                         </div>
                         <div class="card__footer text-end">
-                            <a href="#" class="btn btn-link">Ver ejercicios</a>
+                            <a href="<?= URL ?>Excercise/Listar/99" class="btn btn-link">Ver ejercicios</a>
                         </div>
                     </div>
 
@@ -96,7 +94,7 @@
 
                         </div>
                         <div class="card__footer text-end">
-                            <a href="#" class="btn btn-link">Ver ejercicios</a>
+                            <a href="<?= URL ?>Excercise/Listar/101" class="btn btn-link">Ver ejercicios</a>
                         </div>
                     </div>
 
@@ -133,7 +131,7 @@
             <div class="container">
                 <h2 class="section__title">ACERCA DE</h2>
                 <div class="row about_content">
-                    <div class="col-md-5">
+                    <div class="col-lg-5">
                         <p>
                             Physio Specialized ofrece servicios de Terapia física y Ocupacional personalizado para cada diagnóstico.
                         </p>
@@ -145,7 +143,7 @@
                         </p>
 
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-lg-7">
                         <img src="<?= URL ?>Public/img/logo-fisio.png" class="img" alt="Logo">
                     </div>
                 </div>

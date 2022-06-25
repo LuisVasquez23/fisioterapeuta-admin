@@ -2,9 +2,11 @@
 
 class View
 {
+    private $data;
+
     public function __construct()
     {
-        $this->data = null;
+        $this->data = [];
     }
 
 
