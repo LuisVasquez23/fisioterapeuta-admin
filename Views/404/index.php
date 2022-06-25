@@ -34,8 +34,9 @@
             </div>
         </div>
     </nav>
+    <!-- Navbar end -->
 
-    <div class="container">
+    <div class="container mt-5">
         <div class="row text-center">
             <div class="col-md-12 mt-5">
                 <h3 class="display-1 mt-5">

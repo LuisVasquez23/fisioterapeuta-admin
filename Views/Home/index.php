@@ -21,7 +21,7 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg navbar-dark navbar-blue fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="<?= URL ?>">
                 Physio <span>Specialized</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -80,7 +80,7 @@
 
                         </div>
                         <div class="card__footer text-end">
-                            <a href="<?= URL ?>Excercise/Listar/99" class="btn btn-link">Ver ejercicios</a>
+                            <a href="<?= URL ?>Category" class="btn btn-link">Ver ejercicios</a>
                         </div>
                     </div>
 
@@ -211,7 +211,7 @@
     <footer class="footer">
         <div class="container footer-container">
             <h3 class="footer-title">
-                &copy; Physio <span>Specialized</span>
+                <a href="<?= URL ?>" style="color:white;text-decoration:none;">&copy; Physio <span>Specialized</span></a>
             </h3>
         </div>
     </footer>
