@@ -6,6 +6,6 @@ class Model
     public function __construct()
     {
         $conexion = new Conexion();
-        $this->conexion = $conexion->getConeccion();
+        $this->conexion = $conexion->getConexion();
     }
 }

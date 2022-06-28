@@ -4,21 +4,29 @@ class App
 {
     public function __construct()
     {
-        $url = isset($_GET['url']) ? $_GET['url'] : "/Home/";
+        $url = isset($_GET['url']) ? $_GET['url'] : "/index/";
         $url = rtrim($url, "/");
         $url = explode("/", $url);
+        $view = "index";
+        
 
         if (isset($url[0])) {
             if ($url[0] == "") {
-                $ControllerClass = "Home";
+                $ControllerClass = "Login";
             } else {
                 $ControllerClass = ucfirst($url[0]);
             }
         } else {
-            $ControllerClass = "Home";
+            $ControllerClass = "Login";
+        }
+
+        
+        if ($this->verifyLogIn()) {
+            $ControllerClass = "Admin";
         }
 
         $pathController = "./Controllers/" . $ControllerClass . "Controller.php";
+
 
         if (file_exists($pathController)) {
             $ControllerClass .= "Controller";
@@ -31,6 +39,31 @@ class App
 
         $ControllerObj = new $ControllerClass();
         $ControllerObj->loadModel($url[0]);
-        $ControllerObj->render();
+
+
+        if (isset($url[1])) {
+            $view = strtolower($url[1]);
+            $view = ucfirst($view);
+        }
+
+
+        if (isset($url[2])) {
+            if (method_exists($ControllerObj , $url[2])) {
+                $ControllerObj->{$url[2]}();
+            }
+        }
+
+        $ControllerObj->render($view);
+    }
+
+    public function verifyLogIn(){
+        $logInStarted = false;
+        
+
+        if (isset($_SESSION['id_user'])) {
+            $logInStarted = true;   
+        }
+
+        return $logInStarted;
     }
 }

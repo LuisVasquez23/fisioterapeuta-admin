@@ -5,11 +5,12 @@ class NotFoundController extends Controller
     public function __construct()
     {
         parent::__construct();
-        $this->view->render("404");
+       
     }
 
-    public function MethodNotFound()
+    public function render($view)
     {
-        $this->view->render("404");
+        echo $view;
+        $this->view->render("404/$view.php");
     }
 }

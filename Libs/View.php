@@ -2,18 +2,18 @@
 
 class View
 {
-    private $data;
+    public $data;
 
     public function __construct()
     {
-        $this->data = [];
+        $this->data = null;
     }
 
 
     function render($view, $data = null)
     {
         $this->data = $data;
-        $view = file_exists("./Views/$view/index.php") ? $view : "404";
-        require_once "Views/$view/index.php";
+        $view = file_exists("./Views/$view") ? $view : "404/index.php";
+        require_once "Views/$view";
     }
 }
