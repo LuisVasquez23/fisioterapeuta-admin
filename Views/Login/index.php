@@ -25,7 +25,7 @@
     <!-- Navbar end -->
 
     <div class="form-container mt-5">
-            <form action="<?=URL?>Login/Login" method="POST" class="form login-form">
+            <form action="<?=URL?>Login/index/Login" method="POST" class="form login-form">
                 <h1 class="form-title">Iniciar sesion</h1>
                 <div class="form-group">
                     <label for="user">Usuario</label>
