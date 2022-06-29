@@ -23,6 +23,8 @@ class App
         
         if ($this->verifyLogIn()) {
             $ControllerClass = "Admin";
+        }else{
+            $ControllerClass = "Login";
         }
 
         $pathController = "./Controllers/" . $ControllerClass . "Controller.php";

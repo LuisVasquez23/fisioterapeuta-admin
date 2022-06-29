@@ -116,7 +116,8 @@ a.navbar-brand span {
 .btn-success {
   background-color: #38c33e;
   color: white;
-  width: 120px;
+  width: auto;
+  min-width: 120px;
   border: none;
 }
 
@@ -418,6 +419,10 @@ a.navbar-brand span {
   z-index: 9;
 }
 
+.login-form label{
+  color: white;
+}
+
 .login-form::before{
   content: "";
   width: 100%;
@@ -440,4 +445,22 @@ a.navbar-brand span {
   .login-form{
     min-width: 5rem;
   }
+}
+
+
+.bread-dashboard{
+  border-bottom: 2px solid rgb(238, 238, 238);
+}
+
+.card-number{
+  font-size: 3.5rem;
+}
+
+.img-table{
+  width: 100%;
+  max-width: 250px;
+}
+
+.form-control{
+  margin: 10px 0;
 }

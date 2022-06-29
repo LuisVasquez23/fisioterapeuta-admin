@@ -12,6 +12,9 @@
 
     <!-- My CSS -->
     <link rel="stylesheet" href="<?= URL ?>Public/css/style.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="<?= URL ?>Public/img/logo-fisio.png" type="image/x-icon">
 </head>
 
 <body>

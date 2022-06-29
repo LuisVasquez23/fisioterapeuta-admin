@@ -25,14 +25,18 @@ class LoginController extends Controller
                 $_SESSION['id_user'] = $userData[0]['id_user'];
                 $_SESSION['username'] = $userData[0]['username'];
                 
-                header("location: " . URL . "Admin/index");
+                header("location: " . URL . "Admin/");
             }else {
-                header("location: " . URL . "Login/UserNotFound/?error");
+                header("location: " . URL . "Login/index/UserNotFound/?error");
             }
 
         }else{
             header("location: " . URL . "Login");
         }
+    }
+
+    public function loadData(){
+        $this->view->data = [];
     }
 
     public function UserNotFound(){
