@@ -43,18 +43,20 @@ class App
         $ControllerObj->loadModel($url[0]);
 
 
+        // Vista
         if (isset($url[1])) {
             $view = strtolower($url[1]);
             $view = ucfirst($view);
         }
 
-
+        // Accion
         if (isset($url[2])) {
             if (method_exists($ControllerObj , $url[2])) {
                 $ControllerObj->{$url[2]}();
             }
         }
 
+        // render View
         $ControllerObj->render($view);
     }
 

@@ -18,8 +18,6 @@
     <!-- FontAwesome -->
     <?=FontAwesome?>
 
-
-
 </head>
 <body>
     <!-- Navbar start -->
@@ -75,6 +73,17 @@
                     <!-- Table categories start -->
                     <div class="mt-1">
                         <?php
+                            if(isset($_GET["editSuccess"])):
+                        ?>
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                <strong>Editado correctamente!</strong> Se ha editado correctamente la categoria
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        <?php
+                        endif;
+                        ?>
+
+                        <?php
                             if(isset($_GET["addSuccess"])):
                         ?>
                             <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -115,7 +124,7 @@
                                     <th scope="row"><?=$category["id_category"]?></th>
                                     <td><?=$category["categoria_title"]?></td>
                                     <td>
-                                        <img src="<?=$category["imagen"]?>" alt="<?=$category["categoria_title"]?>-img" class="img-table">
+                                        <img src="<?=URL.$category["imagen"]?>" alt="<?=$category["categoria_title"]?>-img" class="img-table">
                                     </td>
                                     <td>
                                         <button type="button" class="btn btn-sm" style="background: <?=$category["color_head_tittle"]?>; color:white;" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
@@ -127,7 +136,7 @@
                                             <a href="<?=URL?>Admin/ActualizarCategoria?categoria=<?=$category["id_category"]?>" class="btn btn-primary btn-sm">
                                                 <i class="fa-solid fa-pencil"></i>
                                             </a>
-                                            <a href="<?=URL?>Admin/Categories/EliminarCategoria?categoria=<?=$category["id_category"]?>" class="btn btn-danger btn-sm">
+                                            <a href="<?=URL?>Admin/EliminarCategoria?categoria=<?=$category["id_category"]?>" class="btn btn-danger btn-sm">
                                                 <i class="fa-solid fa-trash"></i>
                                             </a>
                                         </div>
