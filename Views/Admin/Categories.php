@@ -61,8 +61,8 @@
     </nav>
     <!-- Navbar end -->
     <!-- Main content start -->
-    <main>
-        <div class="container mt-3">
+    <main class="mb-5">
+        <div class="container mt-3 ">
             <nav aria-label="breadcrumb" class="bread-dashboard">
                 <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?=URL?>Admin">Dashboard</a></li>
@@ -73,7 +73,30 @@
                 <div class="col-md-12">
                     <h3>Categorias </h3>
                     <!-- Table categories start -->
-                    <table class="table text-center table-striped table-bordered">
+                    <div class="mt-1">
+                        <?php
+                            if(isset($_GET["addSuccess"])):
+                        ?>
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                <strong>Agregado correctamente!</strong> Se ha agregado correctamente la categoria
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        <?php
+                        endif;
+                        ?>
+
+                        <?php
+                            if(isset($_GET["addError"])):
+                        ?>
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                <strong>Error</strong> Ocurrio un error al ingresar
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        <?php
+                        endif;
+                        ?>
+                    </div>
+                    <table class="table text-center table-bordered table-hover" id="table-categoria">
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
@@ -85,6 +108,7 @@
                         </thead>
                         <tbody>
                             <?php
+                                if (sizeof($data)){
                                 foreach($data as $category):
                             ?>
                                 <tr>
@@ -100,20 +124,24 @@
                                     </td>
                                     <td>
                                         <div class="btn-group">
-                                            <button class="btn btn-primary btn-sm">
+                                            <a href="<?=URL?>Admin/ActualizarCategoria?categoria=<?=$category["id_category"]?>" class="btn btn-primary btn-sm">
                                                 <i class="fa-solid fa-pencil"></i>
-                                            </button>
-                                            <button class="btn btn-danger btn-sm">
+                                            </a>
+                                            <a href="<?=URL?>Admin/Categories/EliminarCategoria?categoria=<?=$category["id_category"]?>" class="btn btn-danger btn-sm">
                                                 <i class="fa-solid fa-trash"></i>
-                                            </button>
+                                            </a>
                                         </div>
                                     </td>
                                 </tr>
                             <?php
                                 endforeach;
+                                }else{
+                                    echo '<th scope="row" colspan="5">No se ha agregado datos</th>';
+                                }
                             ?>
                         </tbody>
                     </table>
+                   
                     <!-- Table categories end -->
                     <div class="mt-1">
                         <!-- Modal btn add start -->
@@ -131,22 +159,35 @@
 
     <!-- Modal add category start-->
     <div class="modal fade" id="agregarCategoria" tabindex="-1" aria-labelledby="agregarCategoriaLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-dialog modal-dialog-centered modal-md">
             <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="agregarCategoriaLabel">Agregar categoria</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="" method="post" class="form">
+                <form action="<?=URL?>Admin/Categories/AgregarCategoria" method="post" class="form" enctype="multipart/form-data">
+                    <!-- Category name start -->
                     <div class="form-group">
                         <label for="descripcion_input" class="text-muted">Nombre categoria</label>
-                        <input type="text" name="categoria" id="categoria" class="form-control">
+                        <input type="text" name="categoria" id="categoria" class="form-control" required>
                     </div>
+                    <!-- Category name end -->
+                    <!-- Category image start -->
                     <div class="form-group">
-                        <label for="descripcion_input" class="text-muted">Contenido</label>
-                        <textarea name="descripcion" id="descripcion_input" class="form-control">
-                        </textarea>
+                        <label for="img-ejercicio" class="text-muted">Imagen ejercicio</label>
+                        <input type="file" name="img-ejercicio" id="img-ejercicio" class="form-control" accept="image/*" required>
+                    </div>
+                    <!-- Category image end -->
+                    <!-- Category color header-card start -->
+                    <div class="form-group">
+                        <label for="color-head" class="text-muted">Color del encabezado</label>
+                        <br/>
+                        <input type="color" name="color-head" id="color-head" required>
+                    </div>
+                    <!-- Category color header-card end -->
+                    <div class="form-group">
+                        <input type="submit" value="agregar" name="agregar" class="btn btn-success">
                     </div>
                 </form>
             </div>

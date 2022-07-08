@@ -28,14 +28,25 @@ class AdminModel extends Model{
     }
     /*Crud categorias*/ 
 
-    public function addCategory(){
-        $sql = "INSERT INTO category VALUES(?,'?','?','?','?');";
+    public function addCategory($nombre_categoria , $path_img , $color_head){
+
+        $sql = "INSERT INTO category (categoria_title , imagen , color_head_tittle) VALUES(:titulo, :path_img , :color_head );";
         
         $stm = $this->conexion->prepare($sql);
+        $stm->bindParam(":titulo" , $nombre_categoria);
+        $stm->bindParam(":path_img" , $path_img);
+        $stm->bindParam(":color_head" , $color_head);
         $stm->execute();
-        $resultado = $stm->fetchAll();
 
-       return $resultado;
+        $lastInsertId = $this->conexion->lastInsertId();
+        $wasInserted = false;
+        
+        if ($lastInsertId>0) {
+            $wasInserted = true;
+        }
+
+        return $wasInserted;
+
     }
   
     public function dropCategory(){

@@ -459,8 +459,11 @@ a.navbar-brand span {
 .img-table{
   width: 100%;
   max-width: 250px;
+  height: auto;
+  max-height:120px ;
 }
 
 .form-control{
   margin: 10px 0;
 }
+
